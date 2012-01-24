@@ -239,3 +239,6 @@
 *.user
 *.ipch
 *.sdf
+
+*.opensdf
+lib/cpp/Debug/*
