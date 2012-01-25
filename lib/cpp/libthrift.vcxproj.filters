@@ -96,10 +96,7 @@
     <ClCompile Include="src\windows\WinFcntl.cpp">
       <Filter>windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\transport\TPipe.cpp">
-      <Filter>transport</Filter>
-    </ClCompile>
-    <ClCompile Include="src\transport\TPipeServer.cpp">
+    <ClCompile Include="src\transport\TNamedPipe.cpp">
       <Filter>transport</Filter>
     </ClCompile>
   </ItemGroup>
@@ -218,10 +215,7 @@
     <ClInclude Include="src\windows\WinFcntl.h">
       <Filter>windows</Filter>
     </ClInclude>
-    <ClInclude Include="src\transport\TPipe.h">
-      <Filter>transport</Filter>
-    </ClInclude>
-    <ClInclude Include="src\transport\TPipeServer.h">
+    <ClInclude Include="src\transport\TNamedPipe.h">
       <Filter>transport</Filter>
     </ClInclude>
   </ItemGroup>
