@@ -49,6 +49,8 @@ bool TNamedPipe::peek()
 		
 		return (peekReturn != 0 && bytesAvailable > 0);
 	}
+
+	return false;
 }
 
 void TNamedPipe::open()
@@ -93,16 +95,18 @@ uint32_t TNamedPipe::read(uint8_t* buf, uint32_t len)
 	if (!isOpen())
 		throw TTransportException(TTransportException::NOT_OPEN, "Called read on non-open pipe");
 	DWORD bytesRead;
-
+	
 	BOOL success = ReadFile(
 		hPipe_,    // pipe handle 
 		buf,    // buffer to receive reply 
 		len,  // size of buffer 
 		&bytesRead,  // number of bytes read 
-		NULL);    // not overlapped 
+		NULL);    // not overlapped 	
 
 	if (!success)
 		throw TTransportException(TTransportException::UNKNOWN, "Read not successful");
+
+	return bytesRead;
 }
 	
 void TNamedPipe::write(const uint8_t* buf, uint32_t len)
@@ -111,6 +115,7 @@ void TNamedPipe::write(const uint8_t* buf, uint32_t len)
 		throw TTransportException(TTransportException::NOT_OPEN, "Called write on non-open pipe");
 
 	DWORD bytesWritten;
+	
 	BOOL success = WriteFile( 
       hPipe_,                  // pipe handle 
       buf,             // message 
