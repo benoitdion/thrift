@@ -242,3 +242,5 @@
 
 *.opensdf
 lib/cpp/Debug/*
+*_ReSharper.*
+*x64*
