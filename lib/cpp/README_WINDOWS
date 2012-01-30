@@ -27,7 +27,7 @@ You need to define an enviroment variable called THIRD_PARTY. The project
 assumes that you have extracted the dependancies into their default structure
 into the path defined by THIRD_PARTY.
 
-e.g. $(THIRD_PARTY)/boost/boost_1_47_0/
+e.g. $(THIRD_PARTY)/boost/boost_1_48_0/
 
 Thrift is divided into two libraries.
 
