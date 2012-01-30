@@ -86,6 +86,8 @@
 /lib/cpp/*.la
 /lib/cpp/*.lo
 /lib/cpp/*.pc
+/lib/cpp/Debug/
+/lib/cpp/Release/
 /lib/csharp/Thrift.dll
 /lib/c_glib/*.gcda
 /lib/c_glib/*.gcno
@@ -239,8 +241,7 @@
 *.user
 *.ipch
 *.sdf
-
 *.opensdf
-lib/cpp/Debug/*
 *_ReSharper.*
-*x64*
+
+lib/cpp/x64/
